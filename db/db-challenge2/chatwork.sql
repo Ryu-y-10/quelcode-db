@@ -26,7 +26,7 @@ CREATE TABLE participants(
     participant_id INT(10) NOT NULL REFERENCES users(user_id),
     room_id INT(10) NOT NULL REFERENCES chat_rooms(room_id),
     participated_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    PRIMARY KEY(participant_id, room_id),
+    PRIMARY KEY(participant_id, room_id)
 );
 CREATE TABLE post_contents(
     post_id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
