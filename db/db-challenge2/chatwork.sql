@@ -41,6 +41,7 @@ CREATE TABLE post_contents(
 );
 CREATE TABLE tasks(
     task_id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    room_id INT(10) NOT NULL REFERENCES chat_rooms(room_id),
     task_content VARCHAR(1000) NOT NULL,
     person_in_charge_id INT(10) NOT NULL REFERENCES users(user_id),
     deadline_date_time DATETIME,
